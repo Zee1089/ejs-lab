@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+</head>
+<body>
+    <%- include('./partials/nav') %>
+  <h1>Full Menu</h1>
+  <ul>
+    <!-- Add the index parameter -->
+    <% restaurant.menu.forEach((item) => { %>
+      <a href="/menu/<%= item.id %>"></a>
+        <!-- <% if (e.categoty === 'mains') { %>
+            
+                <h2>MAINS</h2>
+                <% if (e.categoty === 'sides') { %>
+                <h2>SIDES</h2> 
+                <% if (e.categoty === 'desserts') { %>
+                <h2>DESSERTS</h2>  -->
+
+        <li>name:<%= item.name %></li>
+        <li>price:<%= item.price %></li>
+        <li>rating:<%= item.rating %></li>
+        <li>details:<%= item.details %></li>
+      </a>
+
+
+        <%  } %>
+
+    </ul>
+
+        <% }); %>
+</body>
+</html>
